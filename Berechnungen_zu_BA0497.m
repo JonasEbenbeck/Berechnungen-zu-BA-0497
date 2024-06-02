@@ -16,13 +16,15 @@ d_IV1 = 0.010;                  % Durchmesser des Wellenabsatzes (siehe Abbildun
 d_V1 = 0.038;                   % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
 d_VI1 = 0.020;                  % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
 d_VII1 = 0.015;                 % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_VIII1 = 0.010;                % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
 l_I1 = 0.008;                   % Länge eines Absatzes von Hülse 1 (siehe Abbildung) [m]
 l_II1 = 0.015;                  % Länge eines Absatzes von Hülse 1 (siehe Abbildung) [m]
 l_III1 = 0.040;                 % Gesamtlänge der Schnecke [m]
 l_IV1 = 0.015;                  % Länge des Eingriffsbereichs der Verzahnung [m] NACHFRAGEN! Name prüfen!
 l_V1 = 0.011;                   % Angenäherte Länge des Wellenabsatzes (siehe Abbildung) [m]
 l_VI1 = 0.0335;                 % Hilfslänge (siehe Abbildung) [m]
+l_VII1 = 0.0225;                % Hilfslänge (siehe Abbildung) [m]
+l_VIII1 = 0.043;                % Halbe Länge des in der Umgebung rotierenden Zylinders (analog zu Abbildung) [m]
+A_51 = 0.00897;                 % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k19 und Umgebung (k0)[m^2]
 
 % Schnecke:
 d_a1 = 0.024635;                % Kopfkreisdurchmesser der Schnecke [m]
@@ -58,14 +60,15 @@ l_I2 = 0.018;                   % Länge der Hülse (siehe Abbildung) [m]
 l_II2 = 0.015;                  % Länge des Wellenabsatzes (siehe Abbildung) [m]
 l_III2 = 0.0055;                % Länge des Wellenabsatzes (siehe Abbildung) [m]
 l_IV2 = 0.029;                  % Hilfslänge (siehe Abbildung) [m]
+l_V2 = 0.028;                   % Hilfslänge (siehe Abbildung) [m]
+l_VI2 = 0.042;                  % Hilfslänge (siehe Abbildung) [m]
 d_P2 = 0.004;                   % Durchmesser Passstifte [m]
 l_P2 = 0.025;                   % Länge der Passstifte [m]
+A_62 = 0.010746;                % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k4 und Umgebung (k0)[m^2]
 
 % Schraubrad:
 d_II2 = 0.0285;                 % Lochkreisdurchmesser der Passstiftbohrungen (siehe Abbildung) [m]
-d_V2 = 0.022;                   % Bohrungsdurchmesser des Schraubrads [m]
-d_VI2 = 0.0243;                 % Hilfsdurchmesser (siehe Abbildung) [m]
-d_VII2 = 0.0327;                % Hilfsdurchmesser (siehe Abbildung) [m]       
+d_V2 = 0.022;                   % Bohrungsdurchmesser des Schraubrads [m]       
 d_VIII2 = 0.035;                % Hilfsdurchmesser (siehe Abbildung) [m]
 d_IX2 = 0.042;                  % Hilfsdurchmesser (siehe Abbildung) [m]
 d_Knoten = 0.0385;              % Durchmesser des Knotenpunkts im Schraubradkörper [m]
@@ -102,7 +105,7 @@ l_Gehaeuse = 0.138;             % Länge des Gehäusemodells (siehe Abbildung) [
 h_Gehaeuse = 0.250;             % Höhe des Gehäusemodells (siehe Abbildung) [m]
 d_PlatteI = 0.030;              % Dicke der oberen Platte (Winkelverstellung) [m]
 d_PlatteII = 0.100;             % Dicke der unteren Platte (Grundplatte) [m]
-l_II0 = 0.250;                  % Hilfslänge zur Berechnung von A_40 (siehe Abbildung) [m]
+l_II0 = 0.250;                  % Hilfslänge zur Bestimmung von A_40 [m]
 
 % --------------------------------------------------------------------------------------------------------------------
 % Geometrische Größen zur Bestimmung der dimensionslosen Kennzahlen:
@@ -115,7 +118,7 @@ L_K12 = 0.16666;                % Charakteristische Länge zur Bestimmung von Re
 epsilon_n = 1.5;                % Überdeckung [-]
 a = 0.0369;                     % Achsabstand [m]
 i = 20;                         % Übersetzung [-]
-n_1 = 12000;                    % Drehzahl Schneckenwelle [U/min] (Nicht größer als 13000 U/min) NACHFRAGEN!
+n_1 = 12000;                    % Drehzahl Schneckenwelle [U/min] (Nicht größer als 12000 U/min) NACHFRAGEN!
 n_2 = n_1/i;                    % Drehzahl Schraubradwelle [U/min]
 VPunkt_OelA = 0.25;             % Eingespritzter Ölvolumenstrom bei Lager A [l/min]
 VPunkt_OelB1 = 0.125;           % Eingespritzter Ölvolumenstrom bei Lager B1 [l/min]
@@ -123,7 +126,7 @@ VPunkt_OelB2 = 0.125;           % Eingespritzter Ölvolumenstrom bei Lager B2 [l
 VPunkt_OelC = 0.25;             % Eingespritzter Ölvolumenstrom bei Lager C [l/min]
 VPunkt_OelD1 = 0.125;           % Eingespritzter Ölvolumenstrom bei Lager D1 [l/min]
 VPunkt_OelD2 = 0.125;           % Eingespritzter Ölvolumenstrom bei Lager D2 [l/min]
-A_innen = 0.037990;             % Gehäuseoberfläche zum Innenraum [m^2]
+A_innen = 0.037990;             % Innere Gehäuseoberfläche ohne der Fläche der Scheibe [m^2]
 VPunkt_zuVZ = 1.5/60000;        % Insgesamt zur Verzahnung eingespritzter Ölvolumenstrom [m^3/s]
 VPunkt_zuRF = 0.01/60000;       % Eingespritzter Ölvolumenstrom, der mit der Flanke des Schraubrads wechselwirkt [m^3/s]
 VPunkt_zuSF = 0.01/60000;       % Eingespritzter Ölvolumenstrom, der mit der Flanke der Schnecke wechselwirkt [m^3/s]
@@ -136,6 +139,7 @@ T_zu = 80;                      % Temperatur des zur Verzahnung eingespritzten �
 lambda_Schraubrad = 0.95;       % Wärmeleitfähigkeit des Schraubradwerkstoffs [W/mK] [Vic24, S.2]
 lambda_Schnecke = 0.95;         % Wärmeleitfähigkeit des Schneckenwerkstoffs [W/mK] [Vic24, S.2]
 lambda_Huelse5 = 50;            % Wärmeleitfähigkeit der Hülse 5 (siehe Abbildung) [W/mK] [CNC21, S.1]
+lambda_Huelse2 = 50;            % Wärmeleitfähigkeit der Hülse 2 (siehe Abbildung) [W/mK] [CNC21, S.1]
 lambda_Passstift = 50;          % Wärmeleitfähigkeit des Passstiftwerkstoffs [W/mK] (Annahme)
 lambda_Welle1 = 39.8;           % Wärmeleitfähigkeit des Schneckenwellenwerkstoffs [W/mK] [thy19b, S.1]
 lambda_Welle2 = 39.8;           % Wärmeleitfähigkeit des Schraubradwellenwerkstoffs [W/mK] [thy19b, S.1]
@@ -198,14 +202,14 @@ beta_Luft = @(x) 1/(x+273.15);
 alpha_E = 2*acos((2*a-d_a2)/(d_a1));
 A_Ersatz = (d_a1^2)/8*(alpha_E-sin(alpha_E));
 R_ZR = s_n2/(2*lambda_Schraubrad*A_Ersatz);
-R_L1 = R_ZR/epsilon_n
+R_L1 = R_ZR/epsilon_n;
 G_L1 = 1/R_L1;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L2 [Suc12, S.60-62]:
 
 R_ZS = s_n1/(2*lambda_Schnecke*A_Ersatz);
-R_L2 = R_ZS/epsilon_n
+R_L2 = R_ZS/epsilon_n;
 G_L2 = 1/R_L2;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -220,32 +224,40 @@ R_52 = log(d_VIII2/d_II2)/(2*pi*lambda_Schraubrad*b_R2);
 R_62 = log(d_II2/d_V2)/(2*pi*lambda_Schraubrad*b_R2);
 R_72 = log(d_V2/d_I2)/(2*pi*lambda_Huelse5*b_R2);
 
-R_L3 = R_12+R_22+R_32
+R_L3 = R_12+R_22+R_32;
 G_L3 = 1/R_L3;
 
-R_L4 = R_62+R_72
+R_L4 = R_62+R_72;
 G_L4 = 1/R_L4;
 
-R_L18 = R_42+R_52
+R_L18 = R_42+R_52;
 G_L18 = 1/R_L18;
+
+% Hinweis zur Notation: Bei den Widerständen R_12 bis R_72 handelt es sich um Hilfswiderstände, die zur Berechnung 
+% von R_L3, R_L4 und R_L18 verwendet wurden. Der Index der Hilfswiderstände setzt sich aus zwei Zahlen zusammen. 
+% Die zweite Zahl gibt an, ob der Hilfswiderstand zur Berechnung eines Widerstands der Schraubradwelle samt 
+% Schraubrad (2) oder der Schneckenwelle inklusive Schnecke (1) verwendet wird. Die erste Zahl des Index ist lediglich
+% eine fortlaufende Nummerierung. So ist der Hilfswiderstand R_52 der fünfte Hilfswiderstand, der zur Berechnung
+% eines Widerstands der Schraubradwelle oder des Schraubrads verwendet wird. Gleiche Indizierungslogik wird auch 
+% bei den im Verlauf des Codes vorkommenden Hilfsflächen (z.B. A_12) verwendet.
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L5 [Pol09, S.67]:
 
 A_Pges = 10*pi*(0.5*d_P2)^2;                            % Summe der Querschittsflächen aller Passstifte im Schraubrad
-R_L5 = (0.5*(b_R2+l_II2))/(lambda_Passstift*A_Pges)
+R_L5 = (0.5*(b_R2+l_II2))/(lambda_Passstift*A_Pges);
 G_L5 = 1/R_L5;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L6 [Gei14, S.71]:
 
-R_L6 = log(d_II2/d_I2)/(2*pi*lambda_Welle2*l_II2)
+R_L6 = log(d_II2/d_I2)/(2*pi*lambda_Welle2*l_II2);
 G_L6 = 1/R_L6;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L7 [Suc12, S.54]:
 
-R_L7 = (0.5*(b_R2+l_II2))/(lambda_Welle2*pi*(0.5*d_I2)^2)
+R_L7 = (0.5*(b_R2+l_II2))/(lambda_Welle2*pi*(0.5*d_I2)^2);
 G_L7 = 1/R_L7;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -254,16 +266,16 @@ G_L7 = 1/R_L7;
 R_82 = (0.5*b_R2)/(lambda_Welle2*pi*(0.5*d_I2)^2);
 R_92 = (0.5*l_I2)/(lambda_Welle2*pi*(0.5*d_IV2)^2);
 
-R_L8 = R_82+R_92
+R_L8 = R_82+R_92;
 G_L8 = 1/R_L8;
 
 % --------------------------------------------------------------------------------------------------------------------
-% Berechnung von R_L9 [Suc12, S.54]:
+% Berechnung von R_L9 [Gei14, S.72 ;Suc12, S.54]:
 
 R_102 = (0.5*l_I2)/(lambda_Welle2*pi*(0.5*d_IV2)^2);
 R_112 = (0.5*B_A)/(lambda_Welle2*pi*(0.5*d_I2)^2);
 
-R_L9 = R_102+R_112
+R_L9 = R_102+R_112;
 G_L9 = 1/R_L9;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -271,20 +283,20 @@ G_L9 = 1/R_L9;
 
 d_mA = (d_A+D_A)/2;
 
-R_L10 = log(d_mA/d_A)/(2*pi*lambda_A*B_A)
+R_L10 = log(d_mA/d_A)/(2*pi*lambda_A*B_A);
 G_L10 = 1/R_L10;
 
 R_L11 = log(D_A/d_mA)/(2*pi*lambda_A*B_A);
-R_L11 = 5*R_L11                                     % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L11 = 5*R_L11;                                   % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L11 = 1/R_L11;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L12 und R_L13 [Suc12, S.54]:
 
-R_L12 = (0.5*l_II2+l_III2+0.5*B_B1)/(lambda_Welle2*pi*(0.5*d_I2)^2)
+R_L12 = (0.5*l_II2+l_III2+0.5*B_B1)/(lambda_Welle2*pi*(0.5*d_I2)^2);
 G_L12 = 1/R_L12;
 
-R_L13 = (0.5*B_B1+(l_IV2-B_B1-B_B2)+0.5*B_B2)/(lambda_Welle2*pi*(0.5*d_I2)^2)
+R_L13 = (0.5*B_B1+(l_IV2-B_B1-B_B2)+0.5*B_B2)/(lambda_Welle2*pi*(0.5*d_I2)^2);
 G_L13 = 1/R_L13;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -292,11 +304,11 @@ G_L13 = 1/R_L13;
 
 d_mB1 = (d_B1+D_B1)/2;
 
-R_L14 = log(d_mB1/d_B1)/(2*pi*lambda_B1*B_B1)
+R_L14 = log(d_mB1/d_B1)/(2*pi*lambda_B1*B_B1);
 G_L14 = 1/R_L14;
 
 R_L16 = log(D_B1/d_mB1)/(2*pi*lambda_B1*B_B1);  
-R_L16 = 5*R_L16                                     % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L16 = 5*R_L16;                                   % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L16 = 1/R_L16;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -304,11 +316,11 @@ G_L16 = 1/R_L16;
 
 d_mB2 = (d_B2+D_B2)/2;
 
-R_L15 = log(d_mB2/d_B2)/(2*pi*lambda_B2*B_B2)
+R_L15 = log(d_mB2/d_B2)/(2*pi*lambda_B2*B_B2);
 G_L15 = 1/R_L15;
 
 R_L17 = log(D_B2/d_mB2)/(2*pi*lambda_B2*B_B2);
-R_L17 = 5*R_L17                                     % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L17 = 5*R_L17;                                   % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L17 = 1/R_L17;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -317,17 +329,18 @@ G_L17 = 1/R_L17;
 R_101 = ((d_a1-d_f1)*0.25)/(lambda_Schnecke*s_n1*b_R2);
 R_101 = R_101/epsilon_n;
 R_111 = log(d_f1/d_III1)/(2*pi*lambda_Schnecke*l_IV1);
+R_141 = log(d_III1/d_IV1)/(2*pi*lambda_Huelse2*l_IV1);
 
-R_L19 = R_101+R_111
+R_L19 = R_101+R_111+R_141;
 G_L19 = 1/R_L19;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L20 [Suc12, S.54]:
 
-R_11 = (l_III1-0.5*l_IV1)/(lambda_Welle1*pi*(0.5*d_III1)^2);
+R_11 = (l_III1-0.5*l_IV1)/(lambda_Welle1*pi*(0.5*d_IV1)^2);
 R_21 = (0.5*l_V1)/(lambda_Welle1*pi*(0.5*d_V1)^2);
 
-R_L20 = R_11+R_21
+R_L20 = R_11+R_21;
 G_L20 = 1/R_L20;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -336,13 +349,13 @@ G_L20 = 1/R_L20;
 R_31 = (0.5*l_V1)/(lambda_Welle1*pi*(0.5*d_V1)^2);
 R_41 = (0.5*B_D1)/(lambda_Welle1*pi*(0.5*d_VI1)^2);
 
-R_L21 = R_31+R_41
+R_L21 = R_31+R_41;
 G_L21 = 1/R_L21; 
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L22 [Suc12, S.54]:
 
-R_L22 = (l_VI1-0.5*B_D1-0.5*B_D2)/(lambda_Welle1*pi*(0.5*d_VI1)^2)
+R_L22 = (l_VI1-0.5*B_D1-0.5*B_D2)/(lambda_Welle1*pi*(0.5*d_VI1)^2);
 G_L22 = 1/R_L22;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -350,11 +363,11 @@ G_L22 = 1/R_L22;
 
 d_mD1 = (d_D1+D_D1)/2;
 
-R_L24 = log(d_mD1/d_D1)/(2*pi*lambda_D1*B_D1)
+R_L24 = log(d_mD1/d_D1)/(2*pi*lambda_D1*B_D1);
 G_L24 = 1/R_L24;
 
 R_L26 = log(D_D1/d_mD1)/(2*pi*lambda_D1*B_D1);
-R_L26 = 5*R_L26                                     % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L26 = 5*R_L26;                                   % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L26 = 1/R_L26;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -362,20 +375,20 @@ G_L26 = 1/R_L26;
 
 d_mD2 = (d_D2+D_D2)/2;
 
-R_L25 = log(d_mD2/d_D2)/(2*pi*lambda_D2*B_D2)
+R_L25 = log(d_mD2/d_D2)/(2*pi*lambda_D2*B_D2);
 G_L25 = 1/R_L25;
 
 R_L27 = log(D_D2/d_mD2)/(2*pi*lambda_D2*B_D2);
-R_L27 = 5*R_L27                                     % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L27 = 5*R_L27;                                   % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L27 = 1/R_L27;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_L28 [Suc12, S.54]:
 
-R_51 = (0.5*l_IV1)/(lambda_Welle1*pi*(0.5*d_III1)^2);
+R_51 = (0.5*l_IV1)/(lambda_Welle1*pi*(0.5*d_IV1)^2);
 R_61 = (0.5*(l_I1+l_II1))/(lambda_Welle1*pi*(0.5*d_II1)^2);
 
-R_L28 = R_51+R_61
+R_L28 = R_51+R_61;
 G_L28 = 1/R_L28; 
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -385,7 +398,7 @@ R_71 = (0.5*(l_I1+l_II1)-l_I1)/(lambda_Welle1*pi*(0.5*d_II1)^2);
 R_81 = l_I1/(lambda_Welle1*pi*(0.5*d_I1)^2);
 R_91 = (0.5*B_C)/(lambda_Welle1*pi*(0.5*d_C)^2);
 
-R_L29 = R_71+R_81+R_91
+R_L29 = R_71+R_81+R_91;
 G_L29 = 1/R_L29;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -393,11 +406,11 @@ G_L29 = 1/R_L29;
 
 d_mC = (d_C+D_C)/2;
 
-R_L30 = log(d_mC/d_C)/(2*pi*lambda_C*B_C)
+R_L30 = log(d_mC/d_C)/(2*pi*lambda_C*B_C);
 G_L30 = 1/R_L30;
 
 R_L31 = log(D_C/d_mC)/(2*pi*lambda_C*B_C);
-R_L31 = 5*R_L31                                 % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
+R_L31 = 5*R_L31;                                  % Berücksichtigung der eigentlichen Inhomogenität der Gehäusetemperatur [Gei14, S.76]
 G_L31 = 1/R_L31;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -406,25 +419,25 @@ G_L31 = 1/R_L31;
 A_12 = 2*pi*(0.5*d_IV2)*l_I2;
 alpha_K1 = 0.587*n_2^0.7*(d_IV2*1000)^0.4;
 
-R_K1 = 1/(A_12*alpha_K1)
+R_K1 = 1/(A_12*alpha_K1);
 G_K1 = 1/R_K1;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K2 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K2 = 1/(28.6*VPunkt_OelA)
+R_K2 = 1/(28.6*VPunkt_OelA);
 G_K2 = 1/R_K2;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K4 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K4 = 1/(28.6*VPunkt_OelB1)
+R_K4 = 1/(28.6*VPunkt_OelB1);
 G_K4 = 1/R_K4;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K5 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K5 = 1/(28.6*VPunkt_OelB2)
+R_K5 = 1/(28.6*VPunkt_OelB2);
 G_K5 = 1/R_K5;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -433,7 +446,7 @@ G_K5 = 1/R_K5;
 A_22 = 2*pi*(0.5*d_III2)*l_II2;
 alpha_K6 = 0.587*n_2^0.7*(d_III2*1000)^0.4;
 
-R_K6 = 1/(A_22*alpha_K6)
+R_K6 = 1/(A_22*alpha_K6);
 G_K6 = 1/R_K6;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -447,7 +460,7 @@ A_21 = 2*pi*(0.5*d_II1)*l_II1;
 alpha_131 = 0.587*n_1^0.7*(d_II1*1000)^0.4;
 R_131 = 1/(A_21*alpha_131);
 
-R_K7 = 1/(1/R_121+1/R_131)
+R_K7 = 1/(1/R_121+1/R_131);
 G_K7 = 1/R_K7;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -456,38 +469,26 @@ G_K7 = 1/R_K7;
 A_31 = 2*pi*(0.5*d_V1)*l_V1;
 alpha_K8 = 0.587*n_1^0.7*(d_V1*1000)^0.4;
 
-R_K8 = 1/(A_31*alpha_K8)
+R_K8 = 1/(A_31*alpha_K8);
 G_K8 = 1/R_K8;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K9 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K9 = 1/(28.6*VPunkt_OelD1)
+R_K9 = 1/(28.6*VPunkt_OelD1);
 G_K9 = 1/R_K9;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K10 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K10 = 1/(28.6*VPunkt_OelD2)
+R_K10 = 1/(28.6*VPunkt_OelD2);
 G_K10 = 1/R_K10;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_K11 [Gei14, S.75-76; Sch20, S.86-87]:
 
-R_K11 = 1/(28.6*VPunkt_OelC)
+R_K11 = 1/(28.6*VPunkt_OelC);
 G_K11 = 1/R_K11;
-
-% --------------------------------------------------------------------------------------------------------------------
-% Berechnung von R_K18:
-
-R_K18 = 13
-G_K18 = 1/R_K18;
-
-% --------------------------------------------------------------------------------------------------------------------
-% Berechnung von R_K19:
-
-R_K19 = 13
-G_K19 = 1/R_K19;
 
 % ____________________________________________________________________________________________________________________
 
@@ -567,7 +568,7 @@ alpha_K3 = (Nu_K3*lambda_Oel)/L_K3;
 A_42 = pi*((0.5*d_f2)^2-(0.5*d_IV2)^2);
 A_52 = pi*((0.5*d_f2)^2-(0.5*d_III2)^2);
 
-R_K3 = 1/(alpha_K3*(A_42+A_52))
+R_K3 = 1/(alpha_K3*(A_42+A_52));
 G_K3 = 1/R_K3;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -578,7 +579,7 @@ Re_K12 = (v_K12*L_K12)/ny_Oel((DeltaT(2)+T_0+DeltaT(1)+T_0)/2);
 Nu_K12 = 0.664*Re_K12^(1/2)*Pr_Oel((DeltaT(2)+T_0+DeltaT(1)+T_0)/2)^(1/3);
 alpha_K12 = (Nu_K12*lambda_Oel)/L_K12;
 
-R_K12 = 1/(alpha_K12*A_innen)
+R_K12 = 1/(alpha_K12*A_innen);
 G_K12 = 1/R_K12;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -618,7 +619,7 @@ R_70 = 1/(alpha_70*(A_40-b_Gehaeuse*l_Gehaeuse));
 alpha_80 = 4;
 R_80 = 1/(alpha_80*b_Gehaeuse*l_Gehaeuse);
 
-R_K13 = 1/(1/R_10+1/R_20+1/R_30+1/(R_40+R_50+R_80)+1/(R_60+R_70))
+R_K13 = 1/(1/R_10+1/R_20+1/R_30+1/(R_40+R_50+R_80)+1/(R_60+R_70));
 G_K13 = 1/R_K13;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -690,7 +691,7 @@ Nu_K16 = 0.664*Re_K16^(1/2)*Pr_Oel((DeltaT(2)+T_0+DeltaT(15)+T_0)/2)^(1/3);
 alpha_K16 = (Nu_K16*lambda_Oel)/L_K16;
 A_32 = 2*A_Zahnstirn2+A_Zahnkopf2;
 
-R_K16 = 1/(alpha_K16*A_32)
+R_K16 = 1/(alpha_K16*A_32);
 G_K16 = 1/R_K16;
 
 % --------------------------------------------------------------------------------------------------------------------
@@ -703,35 +704,68 @@ Nu_K17 = 0.664*Re_K17^(1/2)*Pr_Oel((DeltaT(2)+T_0+DeltaT(27)+T_0)/2)^(1/3);
 alpha_K17 = (Nu_K17*lambda_Oel)/L_K17;
 A_41 = s_a1*b_R2;
 
-R_K17 = 1/(alpha_K17*A_41)
+R_K17 = 1/(alpha_K17*A_41);
 G_K17 = 1/R_K17;
+
+% --------------------------------------------------------------------------------------------------------------------
+% Berechnung von R_K18 [Suc12, S.55-57; Kre58, S.324]
+
+R_122 = (0.5*B_B2+l_V2)/(lambda_Welle2*pi*(0.5*d_I2)^2);
+
+d_VI2 = A_62/(2*pi*l_VI2);
+R_132 = l_VI2/(lambda_Welle2*pi*(0.5*d_VI2)^2);
+
+Re_142 = (2*pi*(n_2/60)*pi*d_VI2^2)/ny_Luft(0.25*DeltaT(4)+T_0);
+Gr_142 = (9.81*beta_Luft(0.25*DeltaT(4)+T_0)*0.5*DeltaT(4)*d_VI2^3)/ny_Luft(0.25*DeltaT(4)+T_0)^2;
+Nu_142 = 0.11*((0.5*Re_142^2+Gr_142)*Pr_Luft)^0.35;
+alpha_142 = (Nu_142*lambda_Luft)/d_VI2;
+R_142 = 1/(alpha_142*A_62);
+
+R_K18 = R_122+R_132+R_142;
+G_K18 = 1/R_K18;
+
+% --------------------------------------------------------------------------------------------------------------------
+% Berechnung von R_K19 [Suc12, S.55-57; Bec63, S.1054]
+
+R_151 = (0.5*B_D2+l_VII1)/(lambda_Welle1*pi*(0.5*d_VII1)^2);
+
+d_VIII1 = A_51/(2*pi*l_VIII1);
+R_161 = l_VIII1/(lambda_Welle1*pi*(0.5*d_VIII1)^2);
+
+Re_171 = (2*pi*(n_1/60)*pi*d_VIII1^2)/ny_Luft(0.25*DeltaT(19)+T_0);
+Nu_171 = 0.076*Re_171^0.7;
+alpha_171 = (Nu_171*lambda_Luft)/d_VIII1;
+R_171 = 1/(alpha_171*A_51);
+
+R_K19 = R_151+R_161+R_171;
+G_K19 = 1/R_K19;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_HPunkt1 [Gei14, S.54-55]:
 
 VPunkt_1716 = VPunkt_zuRF;
-R_HPunkt1 = 1/(VPunkt_1716*roh_Oel((DeltaT(17)+T_0+DeltaT(16)+T_0)/2)*c_Oel((DeltaT(17)+T_0+DeltaT(16)+T_0)/2))
+R_HPunkt1 = 1/(VPunkt_1716*roh_Oel((DeltaT(17)+T_0+DeltaT(16)+T_0)/2)*c_Oel((DeltaT(17)+T_0+DeltaT(16)+T_0)/2));
 G_HPunkt1 = 1/R_HPunkt1;
 
 % -------------------------------------------------------------------------------------------------------------------- 
 % Berechnung von R_HPunkt2 [Gei14, S.54-55]:
 
 VPunkt_162 = VPunkt_zuRF;
-R_HPunkt2 = 1/(VPunkt_162*roh_Oel((DeltaT(16)+T_0+DeltaT(2)+T_0)/2)*c_Oel((DeltaT(16)+T_0+DeltaT(2)+T_0)/2))
+R_HPunkt2 = 1/(VPunkt_162*roh_Oel((DeltaT(16)+T_0+DeltaT(2)+T_0)/2)*c_Oel((DeltaT(16)+T_0+DeltaT(2)+T_0)/2));
 G_HPunkt2 = 1/R_HPunkt2;
 
 % --------------------------------------------------------------------------------------------------------------------
 % Berechnung von R_HPunkt3 [Gei14, S.54-55]:
 
 VPunkt_2928 = VPunkt_zuSF;
-R_HPunkt3 = 1/(VPunkt_2928*roh_Oel((DeltaT(29)+T_0+DeltaT(28)+T_0)/2)*c_Oel((DeltaT(29)+T_0+DeltaT(28)+T_0)/2))
+R_HPunkt3 = 1/(VPunkt_2928*roh_Oel((DeltaT(29)+T_0+DeltaT(28)+T_0)/2)*c_Oel((DeltaT(29)+T_0+DeltaT(28)+T_0)/2));
 G_HPunkt3 = 1/R_HPunkt3;
 
 % -------------------------------------------------------------------------------------------------------------------- 
 % Berechnung von R_HPunkt4 [Gei14, S.54-55]:
 
 VPunkt_282 = VPunkt_zuSF;
-R_HPunkt4 = 1/(VPunkt_282*roh_Oel((DeltaT(28)+T_0+DeltaT(2)+T_0)/2)*c_Oel((DeltaT(28)+T_0+DeltaT(2)+T_0)/2))
+R_HPunkt4 = 1/(VPunkt_282*roh_Oel((DeltaT(28)+T_0+DeltaT(2)+T_0)/2)*c_Oel((DeltaT(28)+T_0+DeltaT(2)+T_0)/2));
 G_HPunkt4 = 1/R_HPunkt4;
 
 % ____________________________________________________________________________________________________________________
