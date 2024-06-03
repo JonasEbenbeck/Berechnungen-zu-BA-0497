@@ -9,22 +9,22 @@
 % Geometrische Größen der Schneckenwelle (Welle 1):
 
 % Welle und Hülsen:
-d_I1 = 0.026;                   % Außendurchmesser eines Absatzes von Hülse 1 (siehe Abbildung) [m]
-d_II1 = 0.020;                  % Außendurchmesser eines Absatzes von Hülse 1 (siehe Abbildung) [m]
-d_III1 = 0.013;                 % Außendurchmesser der Hülse 2 (siehe Abbildung) [m]
-d_IV1 = 0.010;                  % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_V1 = 0.038;                   % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_VI1 = 0.020;                  % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_VII1 = 0.015;                 % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-l_I1 = 0.008;                   % Länge eines Absatzes von Hülse 1 (siehe Abbildung) [m]
-l_II1 = 0.015;                  % Länge eines Absatzes von Hülse 1 (siehe Abbildung) [m]
-l_III1 = 0.040;                 % Gesamtlänge der Schnecke [m]
-l_IV1 = 0.015;                  % Länge des Eingriffsbereichs der Verzahnung [m] NACHFRAGEN! Name prüfen!
-l_V1 = 0.011;                   % Angenäherte Länge des Wellenabsatzes (siehe Abbildung) [m]
-l_VI1 = 0.0335;                 % Hilfslänge (siehe Abbildung) [m]
-l_VII1 = 0.0225;                % Hilfslänge (siehe Abbildung) [m]
-l_VIII1 = 0.043;                % Halbe Länge des in der Umgebung rotierenden Zylinders (analog zu Abbildung) [m]
-A_51 = 0.00897;                 % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k19 und Umgebung (k0)[m^2]
+d_I1 = 0.026;                   % Außendurchmesser eines Absatzes von Hülse 1 (siehe Bild 3.7) [m]
+d_II1 = 0.020;                  % Außendurchmesser eines Absatzes von Hülse 1 (siehe Bild 3.7) [m]
+d_III1 = 0.013;                 % Außendurchmesser der Hülse 2 (siehe Bild 3.7) [m]
+d_IV1 = 0.010;                  % Durchmesser des Wellenabsatzes (siehe Bild 3.7) [m]
+d_V1 = 0.038;                   % Durchmesser des Wellenabsatzes (siehe Bild 3.7) [m]
+d_VI1 = 0.020;                  % Durchmesser des Wellenabsatzes (siehe Bild 3.7) [m]
+d_VII1 = 0.015;                 % Durchmesser des Wellenabsatzes (siehe Bild 3.7) [m]
+l_I1 = 0.008;                   % Länge eines Absatzes von Hülse 1 (siehe Bild 3.7) [m]
+l_II1 = 0.015;                  % Länge eines Absatzes von Hülse 1 (siehe Bild 3.7) [m]
+l_III1 = 0.040;                 % Gesamtlänge der Schnecke (siehe Bild 3.7) [m]
+l_IV1 = 0.015;                  % Angenommene Länge des Eingriffsbereichs der Verzahnung (siehe Bild 3.7) [m]
+l_V1 = 0.011;                   % Angenäherte Länge des Wellenabsatzes (siehe Bild 3.7) [m]
+l_VI1 = 0.0335;                 % Hilfslänge (siehe Bild 3.7) [m]
+l_VII1 = 0.0225;                % Hilfslänge (siehe Bild 3.7) [m]
+l_VIII1 = 0.043;                % Halbe Länge des in der Umgebung rotierenden Zylinders (analog zu l_VI2 in Bild 3.10) [m]
+A_51 = 0.00897;                 % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k19 und Umgebung (k0) (analog zu A_62 in Bild 3.10) [m^2]
 
 % Schnecke:
 d_a1 = 0.024635;                % Kopfkreisdurchmesser der Schnecke [m]
@@ -53,28 +53,28 @@ B_D2 = 0.014;                   % Lagerbreite für Lager D2 [m]
 % Geometrische Größen der Schraubradwelle (Welle 2):
 
 % Welle, Hülsen und Passstifte:
-d_I2 = 0.017;                   % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_III2 = 0.036;                 % Durchmesser des Wellenabsatzes (siehe Abbildung) [m]
-d_IV2 = 0.0252;                 % Außendurchmesser der Hülse (siehe Abbildung) [m]
-l_I2 = 0.018;                   % Länge der Hülse (siehe Abbildung) [m]
-l_II2 = 0.015;                  % Länge des Wellenabsatzes (siehe Abbildung) [m]
-l_III2 = 0.0055;                % Länge des Wellenabsatzes (siehe Abbildung) [m]
-l_IV2 = 0.029;                  % Hilfslänge (siehe Abbildung) [m]
-l_V2 = 0.028;                   % Hilfslänge (siehe Abbildung) [m]
-l_VI2 = 0.042;                  % Hilfslänge (siehe Abbildung) [m]
+d_I2 = 0.017;                   % Durchmesser des Wellenabsatzes (siehe Bild 3.9) [m]
+d_III2 = 0.036;                 % Durchmesser des Wellenabsatzes (siehe Bild 3.9) [m]
+d_IV2 = 0.0252;                 % Außendurchmesser der Hülse (siehe Bild 3.9) [m]
+l_I2 = 0.018;                   % Länge der Hülse (siehe Bild 3.9) [m]
+l_II2 = 0.015;                  % Länge des Wellenabsatzes (siehe Bild 3.9) [m]
+l_III2 = 0.0055;                % Länge des Wellenabsatzes (siehe Bild 3.9) [m]
+l_IV2 = 0.029;                  % Hilfslänge (siehe Bild 3.9) [m]
+l_V2 = 0.028;                   % Hilfslänge (siehe Bild 3.10) [m]
+l_VI2 = 0.042;                  % Hilfslänge (siehe Bild 3.10) [m]
 d_P2 = 0.004;                   % Durchmesser Passstifte [m]
 l_P2 = 0.025;                   % Länge der Passstifte [m]
-A_62 = 0.010746;                % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k4 und Umgebung (k0)[m^2]
+A_62 = 0.010746;                % Wärmeübertragende Fläche zur Berechnung des Wärmeübergangswiderstands zwischen k4 und Umgebung (k0) (siehe Bild 3.10) [m^2]
 
 % Schraubrad:
-d_II2 = 0.0285;                 % Lochkreisdurchmesser der Passstiftbohrungen (siehe Abbildung) [m]
-d_V2 = 0.022;                   % Bohrungsdurchmesser des Schraubrads [m]       
-d_VIII2 = 0.035;                % Hilfsdurchmesser (siehe Abbildung) [m]
-d_IX2 = 0.042;                  % Hilfsdurchmesser (siehe Abbildung) [m]
-d_Knoten = 0.0385;              % Durchmesser des Knotenpunkts im Schraubradkörper [m]
-d_f2 = 0.048590;                % Fußkreisdurchmesser des Schraubrads [m]
-d_a2 = 0.054215;                % Kopfkreisdurchmesser des Schraubrads [m]
-b_R2 = 0.010;                   % Breite des Schraubrads [m]
+d_II2 = 0.0285;                 % Lochkreisdurchmesser der Passstiftbohrungen (siehe Bild 3.8) [m]
+d_V2 = 0.022;                   % Bohrungsdurchmesser des Schraubrads (siehe Bild 3.8) [m]       
+d_VIII2 = 0.035;                % Hilfsdurchmesser (siehe Bild 3.8) [m]
+d_IX2 = 0.042;                  % Hilfsdurchmesser (siehe Bild 3.8) [m]
+d_Knoten = 0.0385;              % Durchmesser des Knotenpunkts Radkörper (siehe Bild 3.8) [m]
+d_f2 = 0.048590;                % Fußkreisdurchmesser des Schraubrads (siehe Bild 3.8) [m]
+d_a2 = 0.054215;                % Kopfkreisdurchmesser des Schraubrads (siehe Bild 3.8) [m]
+b_R2 = 0.010;                   % Breite des Schraubrads (siehe Bild 3.9) [m]
 b_S2 = 0.004;                   % Stegbreite des Schraubrads [m]
 s_n2 = 0.002168;                % Zahndicke am Teilkreis (Schraubrad) [m]
 A_Zahnstirn2 = 4.53*10^(-6);    % Zahnstirnfläche einer Seite eines Zahns am Schraubrad [m^2]
@@ -100,12 +100,12 @@ B_B2 = 0.012;                   % Lagerbreite für Lager B2 [m]
 % --------------------------------------------------------------------------------------------------------------------
 % Geometrische Größen des Gehäusemodells und der Grundplatten:
 
-b_Gehaeuse = 0.099;             % Breite des Gehäusemodells (siehe Abbildung) [m]
-l_Gehaeuse = 0.138;             % Länge des Gehäusemodells (siehe Abbildung) [m]
-h_Gehaeuse = 0.250;             % Höhe des Gehäusemodells (siehe Abbildung) [m]
+b_Gehaeuse = 0.099;             % Breite des Gehäusemodells [m]
+l_Gehaeuse = 0.138;             % Länge des Gehäusemodells [m]
+h_Gehaeuse = 0.250;             % Höhe des Gehäusemodells [m]
 d_PlatteI = 0.030;              % Dicke der oberen Platte (Winkelverstellung) [m]
 d_PlatteII = 0.100;             % Dicke der unteren Platte (Grundplatte) [m]
-l_II0 = 0.250;                  % Hilfslänge zur Bestimmung von A_40 [m]
+l_II0 = 0.250;                  % Hilfslänge zur Bestimmung von A_40 (siehe Bild 3.13) [m]
 
 % --------------------------------------------------------------------------------------------------------------------
 % Geometrische Größen zur Bestimmung der dimensionslosen Kennzahlen:
@@ -118,7 +118,7 @@ L_K12 = 0.16666;                % Charakteristische Länge zur Bestimmung von Re
 epsilon_n = 1.5;                % Überdeckung [-]
 a = 0.0369;                     % Achsabstand [m]
 i = 20;                         % Übersetzung [-]
-n_1 = 12000;                    % Drehzahl Schneckenwelle [U/min] (Nicht größer als 12000 U/min) NACHFRAGEN!
+n_1 = 12000;                    % Drehzahl Schneckenwelle [U/min] (Nicht größer als 12000 U/min)
 n_2 = n_1/i;                    % Drehzahl Schraubradwelle [U/min]
 VPunkt_OelA = 0.25;             % Eingespritzter Ölvolumenstrom bei Lager A [l/min]
 VPunkt_OelB1 = 0.125;           % Eingespritzter Ölvolumenstrom bei Lager B1 [l/min]
@@ -151,7 +151,7 @@ lambda_D1 = 33;                 % Wärmeleitfähigkeit des Lagerwerkstoffs von L
 lambda_D2 = 33;                 % Wärmeleitfähigkeit des Lagerwerkstoffs von Lager D2 [W/mK] [thy19a, S.1]
 lambda_Oel = 0.125;             % Wärmeleitfähigkeit des Öls (bei 100°C angenommen) [W/mK] [She06, S.1]
 lambda_Luft = 0.02808;          % Wärmeleitfähigkeit von trockener Luft bei 1bar und 50°C [W/mK] [Ver13, S.197]
-epsilon_Stahl = 0.8;            % Emissionsgrad von Stahl NACHFRAGEN!
+epsilon_Stahl = 0.52;           % Emissionsgrad von poliertem Stahlguss (Annahme) [Ver13, S.1087]
 lambda_PlatteI = 50;            % Wärmeleitfähigkeit der oberen Platte (Winkelverstellung) [W/mK] (Annahme)
 lambda_PlatteII = 50;           % Wärmeleitfähigkeit der unteren Platte (Grundplatte) [W/mK] (Annahme)
 Pr_Luft = 0.7045;               % Prandtl-Zahl von trockener Luft bei 1bar und 50°C [-] [Ver13, S.197]
